@@ -22,7 +22,6 @@ public class Assignment1 {
     //declaring variables
     int fTemp;
     String word;
-    String newString;
     int num1;
 
     Scanner scan = new Scanner(System.in);
@@ -39,20 +38,15 @@ public class Assignment1 {
    
     System.out.println("Random number generated. Continuing...");
     
-    newString = word.substring(1, 3); //cuts off first and last letter 
-
-    //letters of the cut string    
-    char firstLetter = word.charAt(3); 
-    char middleLetter = word.charAt(2);
-    char lastLetter = word.charAt(1);
+  
+    String reveresedString = new StringBuilder(word.substring(1,4)).reverse().toString();
 
     //generates random number from 32 to 16384
     Random generator = new Random();
-    num1 = generator.nextInt(16384) + 32;
+    num1 = generator.nextInt(16384-32+1) + 32;
 
     /*prints temp in celsius, word reversed with first 
     and last letters cut off, and randomly generated number*/    
-    System.out.println("Your new string is " + ((fTemp-32)/(1.8)) + firstLetter 
-    + middleLetter + lastLetter + num1);
+    System.out.println("Your new string is " + ((fTemp-32)/(1.8)) + reveresedString + num1);
   }
 }
