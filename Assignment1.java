@@ -29,6 +29,12 @@ public class Assignment1 {
     //input for 5-character string
     System.out.println("Enter a 5-character string: ");
     word = scan.nextLine();
+    while(word.length() != 5) {
+      System.out.println("Make 5 characters long!");
+      if(word.length() != 5){
+        word = scan.nextLine();
+      }
+    }
 
     //input for temp conversions
     System.out.println("Enter a number in fahrenheit:");
