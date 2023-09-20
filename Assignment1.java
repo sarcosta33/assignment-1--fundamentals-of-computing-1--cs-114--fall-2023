@@ -16,7 +16,7 @@ public class Assignment1 {
     System.out.println("\s\s\s\s\s\sSS\tCC");
     System.out.println("\s\s\s\s\s\sSS\tCC");
     System.out.println("SS\s\s\s\sSS\tCC\s\s\sCC");
-    System.out.println("\s\sSSSS\t\t\s\sCCC"); 
+    System.out.println("\s\sSSSS\t\t\s\sCCC");
     System.out.println("\t"); //end
 
     //declaring variables
@@ -35,18 +35,17 @@ public class Assignment1 {
     fTemp = scan.nextInt();
 
     scan.close(); //ends scan
-   
+
     System.out.println("Random number generated. Continuing...");
-    
-  
+
     String reveresedString = new StringBuilder(word.substring(1,4)).reverse().toString();
 
     //generates random number from 32 to 16384
     Random generator = new Random();
     num1 = generator.nextInt(16384-32+1) + 32;
 
-    /*prints temp in celsius, word reversed with first 
-    and last letters cut off, and randomly generated number*/    
+    /*prints temp in celsius, word reversed with first
+    and last letters cut off, and randomly generated number*/
     System.out.println("Your new string is " + ((fTemp-32)/(1.8)) + reveresedString + num1);
   }
 }
